@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration>
+    <appender name="OUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%-5level | %d{ISO8601} | %-12logger{1} | %m%n</pattern>
+        </encoder>
+    </appender>
+
+    <logger name="com.cs.microservice">
+        <!--<level value="INFO"/>-->
+        <level value="OFF"/>
+    </logger>
+
+    <logger name="slick.jdbc.JdbcBackend.statement">
+        <!--<level value="DEBUG"/>-->
+        <level value="OFF"/>
+    </logger>
+    <logger name="liquibase">
+        <!--<level value="INFO"/>-->
+        <level value="OFF"/>
+    </logger>
+
+    <root>
+        <!--<level value="WARN"/>-->
+        <level value="OFF"/>
+        <appender-ref ref="OUT"/>
+    </root>
+</configuration>
